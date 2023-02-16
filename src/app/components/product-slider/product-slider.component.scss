@@ -1,0 +1,15 @@
+/* PRODUCTS */
+.product {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}

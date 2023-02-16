@@ -1,0 +1,49 @@
+
+@media only screen and (max-width: 1990px) {
+
+  .home-clothes-items:nth-child(1),.home-clothes-items:nth-child(2),.home-clothes-items:nth-child(3),.home-clothes-items:nth-child(4) {
+    padding-bottom: 3px;
+    padding-right: 0px;
+    padding-left: 6px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+
+  .home-clothes-items:nth-child(4),.home-clothes-items:nth-child(8){
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .home-clothes-items:nth-child(3),.home-clothes-items:nth-child(6){
+    display: none;
+  }
+  .home-clothes-items{
+    padding: 5px 0px 0px;
+  }
+}
+
+.home-clothes-items:nth-child(5),.home-clothes-items:nth-child(6),.home-clothes-items:nth-child(7),.home-clothes-items:nth-child(8) {
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-left: 6px;
+}
+
+
+.home-clothes-bg{
+  background-image: url("../../../assets/home/vêtements.jpg");
+  object-fit: cover;
+}
+
+.home-multimedia-bg{
+  background-image: url("../../../assets/home/00-accessoires-telephone.jpg");
+  background-size: cover;
+  object-fit: cover;
+}
+
+.home-request{
+  background-image: url("../../../assets/home/supply-chain-management_1440x600 copie.jpg");
+  background-size: cover;
+  object-fit: cover;
+}

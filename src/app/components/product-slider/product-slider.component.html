@@ -1,0 +1,39 @@
+<div class="px-1 py-2 rounded shadow bg-white h-100">
+  <section class="product p-0">
+    <div class="d-flex px-2">
+      <p class="text-nowrap h4 mb-2">Top Annonces</p>
+      <div class="text-end ms-auto">
+        <button class="pre-btn btn btn-link text-dark px-1 py-0" data-bs-slide="prev"
+                data-bs-target="#carouselExampleDark"
+                type="button"><i class="bi bi-chevron-left fw-bold h4"></i></button>
+        <button class="nxt-btn btn btn-link text-dark px-1 py-0" data-bs-slide="next"
+                data-bs-target="#carouselExampleDark"
+                type="button"><i class="bi bi-chevron-right fw-bolder h4"></i></button>
+      </div>
+    </div>
+    <div class="product-container">
+      <div *ngFor="let product of products" class="product-card col-lg-2 col-sm-3 col-4">
+        <div class="card px-2 border-0 d-flex position-relative">
+          <div *ngIf="product.isSolde" class="d-flex position-absolute top-0 end-0">
+            <p class="p-1 me-3 mt-2 bg-warning-subtle text-warning rounded shadow">-50%</p>
+          </div>
+          <img alt="..."
+               class="card-img-top rounded"
+               src="{{ product.img }}"
+               style="object-fit: cover; height: 155px">
+          <div class="card-body py-2 px-2">
+            <p class="card-text py-0 mb-1 text-truncate fw-light">{{ product.nom }}</p>
+            <div *ngIf="!product.isSolde">
+              <h6 class="card-title mb-1 h6">{{ product.oldPrice }} <span class="h7">Fcfa</span></h6>
+            </div>
+            <div *ngIf="product.isSolde">
+              <h6 class="card-title mb-1 h6">{{ product.newPrice }} <span class="h7">Fcfa</span></h6>
+              <h6 class="card-title mb-1 h7 text-muted text-decoration-line-through">{{ product.oldPrice }} <span
+                class="h7">Fcfa</span></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
