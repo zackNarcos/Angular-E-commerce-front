@@ -6,7 +6,7 @@ import {NavSidebarComponent} from './nav-sidebar/nav-sidebar.component';
 import {HeaderSidebarsComponent} from './header-sidebars/header-sidebars.component';
 import {RouterLink} from "@angular/router";
 import {ProductSliderComponent} from "./product-slider/product-slider.component";
-import { ProductRecentlyViewComponent } from './product-recently-view/product-recently-view.component';
+import { HeaderLighterComponent } from './header-lighter/header-lighter.component';
 
 
 @NgModule({
@@ -16,14 +16,15 @@ import { ProductRecentlyViewComponent } from './product-recently-view/product-re
     NavSidebarComponent,
     HeaderSidebarsComponent,
     ProductSliderComponent,
-    ProductRecentlyViewComponent,
+    HeaderLighterComponent,
 
   ],
-  exports: [
-    HeaderComponent,
-    FooterComponent,
-    ProductSliderComponent
-  ],
+    exports: [
+        HeaderComponent,
+        FooterComponent,
+        ProductSliderComponent,
+        HeaderLighterComponent
+    ],
   imports: [
     CommonModule,
     RouterLink

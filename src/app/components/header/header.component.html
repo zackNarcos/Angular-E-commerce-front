@@ -1,11 +1,12 @@
-<nav class="navbar navbar-expand-lg bg-warning px-lg-4 px-sm-2">
-  <div class="container-fluid px-lg-5 py-lg-2 mx-lg-3">
+<nav class="navbar navbar-expand-lg py-0">
+  <div class="container-fluid px-5">
     <button aria-controls="offcanvasNavbarCat" class="navbar-toggler border-0" data-bs-target="#offcanvasNavbarCat"
             data-bs-toggle="offcanvas" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none" href="/">
-      <img class="" src="../../../assets/logo.png" width="140">
+    <a class="text-main text-decoration-none" [routerLink]="['/']">
+      <!--      <img class="" src="../../../assets/logo.png" width="110">-->
+      <span class="h3 mb-0">AfreeShop</span>.com
     </a>
     <div>
       <a class="border-0 text-black me-1 d-lg-none">
@@ -16,18 +17,13 @@
         <i class="bi bi-three-dots h4"></i>
       </button>
     </div>
-    <div class="input-group px-5 mx-2 d-none d-md-none d-lg-flex">
+    <div class="input-group px-5 mx-2 d-none rounded-5 d-md-none d-lg-flex">
       <input aria-label="Text input with segmented dropdown button"
-             class="form-control border-2 border-primary py-2"
-             placeholder="Rechercher"
+             class="form-control rounded-start-5 border-main-2 py-2"
+             placeholder="Qu'est-ce que vous recherchez..."
              type="text"
       >
-      <button aria-expanded="false"
-              class="btn btn-outline-primary border-2 border-primary dropdown-toggle dropdown-toggle-split"
-              data-bs-toggle="dropdown" type="button">
-        Catégories
-      </button>
-      <button class="btn btn-primary rounded-end" type="button">Chercher</button>
+      <button class="btn bg-main rounded-end-5 px-4 text-light" type="button"><i class="bi bi-search me-2"></i>Chercher</button>
       <ul class="dropdown-menu dropdown-menu-end">
         <li><a class="dropdown-item" href="#">Action</a></li>
         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -41,9 +37,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
       <ul class="navbar-nav d-flex mb-2 mb-lg-0">
         <li class="nav-item mx-1">
-          <a class="nav-link text-center" href="#" style="font-size: smaller">
-            <i class="bi bi-person-fill text-center mb-1 h4"></i>
-            Profile
+          <a class="nav-link d-flex align-items-center text-start" href="#" style="font-size: smaller">
+            <i class="bi bi-person-fill text-center mb-1 fs-1"></i>
+            <span class="text-nowrap mb-1">Connexion <br> Rejoindre gratuitement</span>
           </a>
         </li>
         <li class="nav-item mx-1">
@@ -70,47 +66,37 @@
   <app-header-sidebars></app-header-sidebars>
   <app-nav-sidebar></app-nav-sidebar>
 </nav>
-<nav class="navbar navbar-expand-lg bg-white px-lg-4 border-bottom border-top d-none d-md-none d-lg-flex">
-  <div class="container-fluid px-5 mx-3">
+<nav class="navbar navbar-expand-lg shadow py-0 border-top d-none d-md-none d-lg-flex">
+  <div class="container-fluid px-5">
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb- mb-lg-0  ">
-        <li class="nav-item">
-          <a [routerLink]="['/categories']" aria-current="page" class="nav-link d-flex justify-content-center">
-            <i class="bi bi-list fs-4 pe-1 d-flex justify-content-center"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tendances</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a aria-expanded="false" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown" href="#"
-             role="button">
-            Boutiques Officielles
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a aria-expanded="false" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown" href="#"
-             role="button">
+      <div class="me-auto d-flex">
+        <a [routerLink]="['/categories']" aria-current="page" class="nav-link mb-0 d-flex align-items-center">
+          <i class="bi bi-list-task fs-5 fw-light pe-1 "></i>
+          <span class="">Categorie</span>
+          <i class="bi bi-chevron-down h7 text-secondary ms-2"></i>
+        </a>
+        <div class="vr my-2 ms-3 me-2"></div>
+        <div class="dropdown mx-2 d-flex align-items-center">
+          <a class="nav-link text-center dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">
             Aide
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
-      </ul>
+        </div>
+        <div class="dropdown mx-2 d-flex align-items-center">
+          <a class="nav-link text-center dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            Central d'achat
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="d-flex">
         <div class="nav-item dropdown">
           <a aria-expanded="false" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown" href="#"

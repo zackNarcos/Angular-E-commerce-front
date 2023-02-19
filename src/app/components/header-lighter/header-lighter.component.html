@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg px-3 py-0">
+  <div class="container-fluid p-0">
+    <button aria-controls="offcanvasNavbarCat" class="navbar-toggler border-0" data-bs-target="#offcanvasNavbarCat"
+            data-bs-toggle="offcanvas" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="text-main text-decoration-none" [routerLink]="['/']">
+<!--      <img class="" src="../../../assets/logo.png" width="110">-->
+      <span class="h3 mb-0">AfreeShop</span>.com
+    </a>
+    <a [routerLink]="['/categories']" aria-current="page" class="nav-link mb-0 ms-4 d-flex align-items-center">
+      <i class="bi bi-list-task fs-5 fw-light pe-1 "></i>
+      <span class="">Categorie</span>
+      <i class="bi bi-chevron-down h7 text-secondary ms-2"></i>
+    </a>
+    <div>
+      <a class="border-0 text-black me-1 d-lg-none">
+        <i class="bi bi-cart3 h4"></i>
+      </a>
+      <button aria-controls="offcanvasDarkNavbar" class="navbar-toggler border-0" data-bs-target="#offcanvasDarkNavbar"
+              data-bs-toggle="offcanvas" type="button">
+        <i class="bi bi-three-dots h4"></i>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent1">
+      <ul class="navbar-nav d-flex mb-2 mb-lg-0">
+        <li class="nav-item mx-1">
+          <div class="dropdown">
+            <a class="nav-link text-center dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-fill text-center mb-1 h4"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item mx-1">
+          <div class="dropdown">
+            <a class="nav-link text-center dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-chat-left-text-fill text-center mb-1 h4"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item mx-1">
+          <div class="dropdown">
+            <a class="nav-link text-center dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-heart-fill text-center mb-1 h4"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item mx-1">
+          <div class="dropdown">
+            <a class="nav-link text-center dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-cart3 text-center mb-1 h4"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="vr my-2 ms-2 me-3"></div>
+      <div class="dropdown me-1">
+        <a class="nav-link text-center dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+          Aide
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+      <div class="dropdown mx-2">
+        <a class="nav-link text-center dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+          Vendre sur AfreeShop
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+      <div class="vr my-2 ms-2 me-3"></div>
+      <div class="dropdown">
+        <a class="nav-link text-center dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+          Autres
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <app-header-sidebars></app-header-sidebars>
+  <app-nav-sidebar></app-nav-sidebar>
+</nav>

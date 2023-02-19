@@ -4,12 +4,24 @@
   overflow: hidden;
 }
 
+.product-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0 0 15px;
+}
+
 .product-container {
-  display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
 }
 
 .product-container::-webkit-scrollbar {
   display: none;
+}
+
+.nxt-btn, .pre-btn {
+  top: 36%;
+  z-index: 8;
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
 }

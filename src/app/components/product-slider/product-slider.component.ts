@@ -1,12 +1,14 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 import {Product} from "../../shareds/models/product";
+import {SliderItems} from "../../shareds/models/slider-items";
 
 @Component({
   selector: 'app-product-slider',
   templateUrl: './product-slider.component.html',
   styleUrls: ['./product-slider.component.scss']
 })
-export class ProductSliderComponent implements AfterViewInit {
+export class ProductSliderComponent implements AfterViewInit, OnInit {
+
   products: Product[] = [
     {
       id: 1,
@@ -118,6 +120,16 @@ export class ProductSliderComponent implements AfterViewInit {
     },
   ]
 
+  // @ts-ignore
+  @Input() sliderItemInput: SliderItems
+  isDisabled: any = true;
+  isOver: any = false;
+  sliderItem: SliderItems = new SliderItems("","",[])
+
+  ngOnInit(): void {
+    this.sliderItem = this.sliderItemInput
+  }
+
   ngAfterViewInit(): void {
     let productContainers = document.querySelectorAll('.product-container');
     let nxtBtn = document.querySelectorAll('.nxt-btn');
@@ -135,21 +147,32 @@ export class ProductSliderComponent implements AfterViewInit {
       })
     })
     this.autoPlay()
+
   }
 
   autoPlay() {
     setInterval(() => {
       let productContainers = document.querySelectorAll('.product-container');
       let cptScroll = 0
-      productContainers.forEach((item, i) => {
+      productContainers.forEach((item) => {
         let containerWidth = item.getBoundingClientRect().width
-        item.scrollLeft += containerWidth
-        cptScroll = item.scrollLeft + cptScroll
-        if (item.scrollWidth - containerWidth - cptScroll <= 1) {
-          item.scrollLeft -= cptScroll
-          cptScroll = 0
+        if (!this.isOver) {
+          item.scrollLeft += containerWidth
+          cptScroll = item.scrollLeft + cptScroll
+          if (item.scrollWidth - containerWidth - cptScroll <= 1) {
+            item.scrollLeft -= cptScroll
+            cptScroll = 0
+          }
         }
       })
     }, 10000)
+  }
+
+  mouseIn(b: boolean) {
+    this.isDisabled = b
+  }
+
+  isOverMethod(b: boolean) {
+    this.isOver = b
   }
 }

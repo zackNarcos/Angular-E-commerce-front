@@ -3,7 +3,7 @@
 
   .home-clothes-items:nth-child(1),.home-clothes-items:nth-child(2),.home-clothes-items:nth-child(3),.home-clothes-items:nth-child(4) {
     padding-bottom: 3px;
-    padding-right: 0px;
+    padding-right: 0;
     padding-left: 6px;
   }
 }
@@ -20,13 +20,19 @@
     display: none;
   }
   .home-clothes-items{
-    padding: 5px 0px 0px;
+    padding: 5px 0 0;
   }
+}
+.hot-tandance-container{
+  height: 400px;
+}
+
+.carousel-item{
 }
 
 .home-clothes-items:nth-child(5),.home-clothes-items:nth-child(6),.home-clothes-items:nth-child(7),.home-clothes-items:nth-child(8) {
   padding-top: 3px;
-  padding-right: 0px;
+  padding-right: 0;
   padding-left: 6px;
 }
 

@@ -4,49 +4,66 @@
   <!--      this section is for hot tandance-->
   <div>
     <!--      hot-tandance-lg-->
-    <div class="row col-12 mx-auto py-3 rounded border bg-white d-none d-md-flex d-lg-flex">
-      <div class="col-sm-3">
-        <ul class="nav flex-column nav-pills">
-          <li class="nav-item">
-            <a class="nav-link bg-info text-black" aria-current="page" href="#">Véhicules</a>
+    <div class="row col-12 mx-auto hot-tandance-container">
+      <div class="col-sm-2 p-0 h-100">
+        <ul id="category-container" class="nav px-2 flex-column d-flex justify-content-around shadow rounded bg-white px-2 h-100">
+          <li *ngFor="let category of categorys" class="nav-item">
+            <a class="nav-link text-black fw-bolder p-0 d-flex align-items-center" [routerLink]="category.path">
+              <i [ngClass]="'h5 mb-0 bi bi-'+ category.icon"></i>
+              <span class="fw-light fs-6 ms-2 py-0">{{ category.title }}</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-black" href="#">Vetement</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="#">Electronic</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black">Electromenager</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="#">Chaussures</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="#">Cuisine & interrieur</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black">Nouritures</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="#">Animaux </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="#">Machines & outils</a>
+            <p class="nav-link text-black fw-bolder p-0 mb-0 d-flex align-items-center">
+              <i [ngClass]="'h5 mb-0 bi bi-chat-quote'"></i>
+              <span class="fw-light ms-2">Autres catégories</span>
+            </p>
           </li>
         </ul>
       </div>
-      <div class="col-sm-9 row pe-0">
-        <div class="col-xl-9 col-md-12 p-5" style="background-image: url('https://izideals.sn/images-property/ed639fa61c1a88741afcecac102fd354fc18171c-Q1MZHS.jpg'); background-size: cover">
-          <div class="p-3 bg-light bg-opacity-50 rounded shadow col-9">
-            <h3 class="fw-light">Dernière tendances</h3>
-            <h2 class="fw-bold">Iphone 13 </h2>
-            <a class="btn btn-light shadow">Savoir plus</a>
+      <div class="col-sm-8 h-100">
+        <div id="carouselExampleCaptions" class="carousel slide shadow rounded bg-white h-100">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
+          <div class="carousel-inner h-100 rounded" id="carousel-container">
+            <div class="carousel-item active h-100">
+              <img id="carousel-item-1" src="https://izideals.sn/images-property/ed639fa61c1a88741afcecac102fd354fc18171c-Q1MZHS.jpg" class="w-100 carousel-item-img rounded" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <img id="carousel-item-2" src="https://cdn-europe1.lanmedia.fr/var/europe1/storage/images/europe1/medias-tele/la-nouvelle-strategie-de-la-plateforme-de-streaming-mycanal-va-rejouir-les-cinephiles-3991761/56001855-1-fre-FR/La-nouvelle-strategie-de-la-plateforme-de-streaming-myCanal-va-rejouir-les-cinephiles.png" class="w-100 carousel-item-img rounded" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <img id="carousel-item-3" src="https://izideals.sn/images-property/ed639fa61c1a88741afcecac102fd354fc18171c-Q1MZHS.jpg" class="w-100 carousel-item-img rounded" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="col-xl-3 col-md-12 px-0 ps-xl-2 row mt-2 mt-xl-0 mx-0">
-          <div class="col-md-4 col-xl-12 px-0 mb-xl-2">
-            <div class="card border-0 text-bg-info h-100">
+      </div>
+      <div class="col-sm-2 px-0 h-100">
+        <div class="col-xl-12 px-0 h-50">
+          <div class="card border-0 text-bg-info h-100">
             <div class="card-body row py-1">
               <div class="col-3 px-1">
                 <i class="bi bi-person-circle h1"></i>
@@ -58,21 +75,12 @@
             <a class="btn btn-primary py-1 mx-2 ">S'inscrire </a>
             <a class="btn btn-light text-primary py-1 mx-2 my-2 ">Connexion</a>
           </div>
-          </div>
-
-          <div class="col-md-4 col-xl-12 px-xl-0 mb-xl-2">
-            <div class="card border-0 text-bg-warning h-100 ">
+        </div>
+        <div class="col-xl-12 px-0 h-50 pt-2">
+          <div class="card border-0 text-bg-warning h-100 ">
             <div class="card-body row h-auto py-1">
               <p class="card-text mb-0">Récuperer votre commande en Boutique ou dans un de nos points de relait <i class="bi bi-geo"></i></p>
             </div>
-          </div>
-          </div>
-          <div class="col-md-4 col-xl-12 px-0">
-            <div class="card border-0 text-bg-success h-100">
-            <div class="card-body row h-auto py-3">
-              <p class="card-text mb-0">Certains produits peuvent être livré. <i class="bi bi-truck"></i></p>
-            </div>
-          </div>
           </div>
         </div>
       </div>
