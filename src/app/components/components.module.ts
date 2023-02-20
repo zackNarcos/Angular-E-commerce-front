@@ -6,7 +6,9 @@ import {NavSidebarComponent} from './nav-sidebar/nav-sidebar.component';
 import {HeaderSidebarsComponent} from './header-sidebars/header-sidebars.component';
 import {RouterLink} from "@angular/router";
 import {ProductSliderComponent} from "./product-slider/product-slider.component";
-import { ProductRecentlyViewComponent } from './product-recently-view/product-recently-view.component';
+import { HeaderLighterComponent } from './header-lighter/header-lighter.component';
+import { CategoriesSliderComponent } from './categories-slider/categories-slider.component';
+import { ProductVipSliderComponent } from './product-vip-slider/product-vip-slider.component';
 
 
 @NgModule({
@@ -16,13 +18,18 @@ import { ProductRecentlyViewComponent } from './product-recently-view/product-re
     NavSidebarComponent,
     HeaderSidebarsComponent,
     ProductSliderComponent,
-    ProductRecentlyViewComponent,
+    HeaderLighterComponent,
+    CategoriesSliderComponent,
+    ProductVipSliderComponent,
 
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    ProductSliderComponent
+    ProductSliderComponent,
+    HeaderLighterComponent,
+    CategoriesSliderComponent,
+    ProductVipSliderComponent
   ],
   imports: [
     CommonModule,

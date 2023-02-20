@@ -1,239 +1,248 @@
-<nav
-  aria-label="breadcrumb"
-  style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
-  <ol class="breadcrumb fw-light text">
-    <li class="breadcrumb-item"><a [routerLink]="['/']" class="text-decoration-none text-muted">Accueil</a></li>
-    <li class="breadcrumb-item"><a [routerLink]="['/categorie']" class="text-decoration-none text-muted">Categorie</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Tout</li>
-  </ol>
-</nav>
+<div class="mx-5 px-3 pt-4">
+  <nav
+    aria-label="breadcrumb"
+    style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
+    <ol class="breadcrumb fw-light text">
+      <li class="breadcrumb-item"><a [routerLink]="['/']" class="text-decoration-none text-muted">Accueil</a></li>
+      <li class="breadcrumb-item"><a [routerLink]="['/categorie']" class="text-decoration-none text-muted">Categorie</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Tout</li>
+    </ol>
+  </nav>
 
-<div class="row">
-  <div class="col-md-3 d-none d-md-block">
-    <div class="border-top py-2 mb-1">
-      <p class="fw-bold mb-1">Catégories</p>
-      <ul class="navbar-nav">
-        <ng-container *ngFor="let categoryInfo of categoryInfos">
-          <li class="nav-item mb-1">
-            <a class="fw-light text-decoration-none text-dark">{{categoryInfo.title}}</a>
-          </li>
-        </ng-container>
+  <div class="row">
+    <div class="col-md-2 d-none d-md-block">
+      <div class="border-top py-2 mb-1">
+        <p class="fw-bold mb-1">Catégories</p>
+        <ul class="navbar-nav">
+          <ng-container *ngFor="let categoryInfo of categoryInfos">
+            <li class="nav-item mb-1">
+              <a class="fw-light text-decoration-none text-dark">{{categoryInfo.title}}</a>
+            </li>
+          </ng-container>
 
-      </ul>
-    </div>
-    <div class="border-top py-2 mb-1">
-      <p class="fw-bold mb-1">Marques</p>
-      <ul class="navbar-nav scrollbar-track-hidden" style="max-height: 200px; overflow-y: scroll">
-        <ng-container *ngFor="let brandInfo of brandInfos">
-          <li class="nav-item form-check mb-1 ps-5">
-            <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault1" [(ngModel)]="brandInfo.value">
-            <label class="form-check-label fw-light" for="flexCheckDefault1">
-              {{brandInfo.title}}
-            </label>
-          </li>
-        </ng-container>
-
-      </ul>
-    </div>
-    <div class="border-top py-2  mb-1">
-      <p class="fw-bold mb-1">Prix</p>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Min" aria-label="Username">
-        <span class="input-group-text">-</span>
-        <input type="text" class="form-control" placeholder="Max" aria-label="Server">
+        </ul>
       </div>
-    </div>
-    <div class="border-top py-2 mb-1">
-      <p class="fw-bold mb-1">Note</p>
-      <ul class="navbar-nav">
-        <li class="nav-item form-check mb-1 ps-5 d-flex">
-          <input class="form-check-input me-3" name="rate" type="radio" value="4">
-          <label class="form-check-label fw-light" >
-            <i class="bi bi-star-fill text-warning me-1"></i>
-            <i class="bi bi-star-fill text-warning me-1"></i>
-            <i class="bi bi-star-fill text-warning me-1"></i>
-            <i class="bi bi-star-fill text-warning me-1"></i>
-            <i class="bi bi-star-fill text-muted me-1"></i>
-          </label>
-        </li>
-        <li class="nav-item form-check mb-1 ps-5 d-flex">
-          <input class="form-check-input me-3" name="rate" type="radio" value="3">
-          <label class="form-check-label fw-light" >
-            <i class="bi bi-star-fill text-warning me-1"></i>
-            <i class="bi bi-star-fill text-warning me-1"></i>
-            <i class="bi bi-star-fill text-warning me-1"></i>
-            <i class="bi bi-star-fill text-muted me-1"></i>
-            <i class="bi bi-star-fill text-muted me-1"></i>
-          </label>
-        </li>
-        <li class="nav-item form-check mb-1 ps-5 d-flex">
-          <input class="form-check-input me-3" name="rate" type="radio" value="2">
-          <label class="form-check-label fw-light" >
-            <i class="bi bi-star-fill text-warning me-1"></i>
-            <i class="bi bi-star-fill text-warning me-1"></i>
-            <i class="bi bi-star-fill text-muted me-1"></i>
-            <i class="bi bi-star-fill text-muted me-1"></i>
-            <i class="bi bi-star-fill text-muted me-1"></i>
-          </label>
-        </li>
-        <li class="nav-item form-check mb-1 ps-5 d-flex">
-          <input class="form-check-input me-3" name="rate" type="radio" value="1">
-          <label class="form-check-label fw-light">
-            <i class="bi bi-star-fill text-warning me-1"></i>
-            <i class="bi bi-star-fill text-muted me-1"></i>
-            <i class="bi bi-star-fill text-muted me-1"></i>
-            <i class="bi bi-star-fill text-muted me-1"></i>
-            <i class="bi bi-star-fill text-muted me-1"></i>
-          </label>
-        </li>
-      </ul>
-    </div>
-    <div class="border-top py-2 mb-1">
-      <p class="fw-bold mb-1">Couleurs</p>
-      <ul class="navbar-nav scrollbar-track-hidden" style="max-height: 200px; overflow-y: scroll">
-        <ng-container *ngFor="let colorInfo of colorInfos">
-          <li class="nav-item form-check mb-1 ps-5">
-            <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault" [(ngModel)]="colorInfo.value">
-            <label class="form-check-label fw-light" for="flexCheckDefault">
-              <i class="bi bi-square-fill" style="color: {{colorInfo.color}}"></i>
-              {{colorInfo.title}}
-            </label>
-          </li>
-        </ng-container>
+      <div class="border-top py-2 mb-1">
+        <p class="fw-bold mb-1">Marques</p>
+        <ul class="navbar-nav scrollbar-track-hidden" style="max-height: 200px; overflow-y: scroll">
+          <ng-container *ngFor="let brandInfo of brandInfos">
+            <li class="nav-item form-check mb-1 ps-5">
+              <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault1" [(ngModel)]="brandInfo.value">
+              <label class="form-check-label fw-light" for="flexCheckDefault1">
+                {{brandInfo.title}}
+              </label>
+            </li>
+          </ng-container>
 
-      </ul>
-    </div>
-    <div class="border-top py-2 mb-1">
-      <p class="fw-bold mb-1">Taille</p>
-      <ul class="navbar-nav scrollbar-track-hidden" style="max-height: 200px; overflow-y: scroll">
-        <ng-container *ngFor="let sizeInfo of sizeInfos">
-          <li class="nav-item form-check mb-1 ps-5">
-            <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault2" [(ngModel)]="sizeInfo.value">
-            <label class="form-check-label fw-light" for="flexCheckDefault2">
-              {{sizeInfo.size}}
-              {{sizeInfo.from}}
-            </label>
-          </li>
-        </ng-container>
-
-      </ul>
-    </div>
-    <div class="border-top py-2 mb-1">
-      <p class="fw-bold mb-1">Expedié depuis</p>
-      <ul class="navbar-nav scrollbar-track-hidden" style="max-height: 200px; overflow-y: scroll">
-        <ng-container *ngFor="let fromInfo of fromInfos">
-          <li class="nav-item form-check mb-1 ps-5">
-            <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault3" [(ngModel)]="fromInfo.value">
-            <label class="form-check-label fw-light" for="flexCheckDefault3">
-              {{fromInfo.from}}
-            </label>
-          </li>
-        </ng-container>
-
-      </ul>
-    </div>
-
-  </div>
-  <div class="col-md-9">
-    <!--  filter section  -->
-    <p class="text-muted h7 mb-0 d-block d-sm-none">14296 résultats trouvés</p>
-    <div class="border rounded bg-white py-2 px-2">
-      <div class="row mx-0 d-flex justify-content-end position-relative">
-        <div class="position-absolute bottom-50 d-sm-block d-none"><p class="text-muted mb-0">14296 résultats trouvés</p></div>
-        <div class="col-8 col-sm-5 col-xl-4 py-1">
-          <select class="form-select " aria-label="Default select example">
-            <option selected>Les plus demandés</option>
-            <option value="1">Nouvel arrivage</option>
-            <option value="2">Prix croissant</option>
-            <option value="3">Prix décroissant</option>
-            <option value="3">Les mieux noté</option>
-          </select>
-        </div>
-        <div class="btn-group col-3 col-sm-2 col-lg-2 px-0 me-2 py-1" role="group" aria-label="Basic outlined example">
-          <button type="button" class="btn border py-0 bg-body-secondary display grid" (click)="display(grid)" value="1" #grid><i class="bi bi-grid-fill"></i></button>
-          <button type="button" class="btn border py-0 fw-bold display list" (click)="display(list)" value="2" #list><i class="bi bi-list"></i></button>
+        </ul>
+      </div>
+      <div class="border-top py-2  mb-1">
+        <p class="fw-bold mb-1">Prix</p>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Min" aria-label="Username">
+          <span class="input-group-text">-</span>
+          <input type="text" class="form-control" placeholder="Max" aria-label="Server">
         </div>
       </div>
-    </div>
-    <div class=" my-1">
-      <button class="btn btn-outline-primary text-muted fw-light py-1 mt-2 me-2">Samsung <i class="bi bi-x-lg"></i></button>
-      <button class="btn btn-outline-primary text-muted fw-light py-1 mt-2 me-2">Samsung <i class="bi bi-x-lg"></i></button>
-      <button class="btn btn-outline-primary text-muted fw-light py-1 mt-2 me-2">Samsung <i class="bi bi-x-lg"></i></button>
-      <button class="btn btn-outline-primary text-muted fw-light py-1 mt-2 me-2">Samsung <i class="bi bi-x-lg"></i></button>
-      <button class="btn border-0 text-primary fw-light py-1 ms-2">Suprimer les filtres</button>
-    </div>
-
-    <div class="px-0 row py-2 display-list d-none">
-      <div *ngFor="let product of colorInfos" class="col-12 mb-3 card-product">
-        <a class="card text-decoration-none text-dark border-0 shadow w-100 h-100" [routerLink]="['/detail']">
-         <div class="row mx-0">
-           <div class="col-3">
-             <img src="https://www.alephksa.com/wp-content/uploads/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a_EN-1-scaled.jpg" class="card-img-top object-fit-cover" alt="..."  style="height:220px">
-           </div>
-           <div class="card-body col-9">
-             <h5 class="card-title mb-1">550.000<span class="h7"> FCFA</span></h5>
-             <p class="card-title h7 text-muted mb-1">
-               <span class="text-decoration-line-through ">550.000 FCFA</span>
-               <span class="bg-primary-subtle text-primary h6 mx-1 p-1 rounded">-50%</span>
-             </p>
-             <p class="mb-1">
-               <i class="bi bi-star-fill text-warning me-1 h7"></i>
-               <i class="bi bi-star-fill text-warning me-1 h7"></i>
-               <i class="bi bi-star-fill text-warning me-1 h7"></i>
-               <i class="bi bi-star-fill text-warning me-1 h7"></i>
-               <i class="bi bi-star-fill text-secondary-emphasis me-1 h7"></i>
-               <span class="text-muted h7 ">(123 vote)</span>
-             </p>
-             <p class="card-text product-title">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <a href="#" class="btn btn-primary float-end">Ajouter au panier</a>
-           </div>
-         </div>
-        </a>
+      <div class="border-top py-2 mb-1">
+        <p class="fw-bold mb-1">Note</p>
+        <ul class="navbar-nav">
+          <li class="nav-item form-check mb-1 ps-5 d-flex">
+            <input class="form-check-input me-3" name="rate" type="radio" value="4">
+            <label class="form-check-label fw-light" >
+              <i class="bi bi-star-fill text-warning me-1"></i>
+              <i class="bi bi-star-fill text-warning me-1"></i>
+              <i class="bi bi-star-fill text-warning me-1"></i>
+              <i class="bi bi-star-fill text-warning me-1"></i>
+              <i class="bi bi-star-fill text-muted me-1"></i>
+            </label>
+          </li>
+          <li class="nav-item form-check mb-1 ps-5 d-flex">
+            <input class="form-check-input me-3" name="rate" type="radio" value="3">
+            <label class="form-check-label fw-light" >
+              <i class="bi bi-star-fill text-warning me-1"></i>
+              <i class="bi bi-star-fill text-warning me-1"></i>
+              <i class="bi bi-star-fill text-warning me-1"></i>
+              <i class="bi bi-star-fill text-muted me-1"></i>
+              <i class="bi bi-star-fill text-muted me-1"></i>
+            </label>
+          </li>
+          <li class="nav-item form-check mb-1 ps-5 d-flex">
+            <input class="form-check-input me-3" name="rate" type="radio" value="2">
+            <label class="form-check-label fw-light" >
+              <i class="bi bi-star-fill text-warning me-1"></i>
+              <i class="bi bi-star-fill text-warning me-1"></i>
+              <i class="bi bi-star-fill text-muted me-1"></i>
+              <i class="bi bi-star-fill text-muted me-1"></i>
+              <i class="bi bi-star-fill text-muted me-1"></i>
+            </label>
+          </li>
+          <li class="nav-item form-check mb-1 ps-5 d-flex">
+            <input class="form-check-input me-3" name="rate" type="radio" value="1">
+            <label class="form-check-label fw-light">
+              <i class="bi bi-star-fill text-warning me-1"></i>
+              <i class="bi bi-star-fill text-muted me-1"></i>
+              <i class="bi bi-star-fill text-muted me-1"></i>
+              <i class="bi bi-star-fill text-muted me-1"></i>
+              <i class="bi bi-star-fill text-muted me-1"></i>
+            </label>
+          </li>
+        </ul>
       </div>
+      <div class="border-top py-2 mb-1">
+        <p class="fw-bold mb-1">Couleurs</p>
+        <ul class="navbar-nav scrollbar-track-hidden" style="max-height: 200px; overflow-y: scroll">
+          <ng-container *ngFor="let colorInfo of colorInfos">
+            <li class="nav-item form-check mb-1 ps-5">
+              <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault" [(ngModel)]="colorInfo.value">
+              <label class="form-check-label fw-light" for="flexCheckDefault">
+                <i class="bi bi-square-fill" style="color: {{colorInfo.color}}"></i>
+                {{colorInfo.title}}
+              </label>
+            </li>
+          </ng-container>
+
+        </ul>
+      </div>
+      <div class="border-top py-2 mb-1">
+        <p class="fw-bold mb-1">Taille</p>
+        <ul class="navbar-nav scrollbar-track-hidden" style="max-height: 200px; overflow-y: scroll">
+          <ng-container *ngFor="let sizeInfo of sizeInfos">
+            <li class="nav-item form-check mb-1 ps-5">
+              <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault2" [(ngModel)]="sizeInfo.value">
+              <label class="form-check-label fw-light" for="flexCheckDefault2">
+                {{sizeInfo.size}}
+                {{sizeInfo.from}}
+              </label>
+            </li>
+          </ng-container>
+
+        </ul>
+      </div>
+      <div class="border-top py-2 mb-1">
+        <p class="fw-bold mb-1">Expedié depuis</p>
+        <ul class="navbar-nav scrollbar-track-hidden" style="max-height: 200px; overflow-y: scroll">
+          <ng-container *ngFor="let fromInfo of fromInfos">
+            <li class="nav-item form-check mb-1 ps-5">
+              <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault3" [(ngModel)]="fromInfo.value">
+              <label class="form-check-label fw-light" for="flexCheckDefault3">
+                {{fromInfo.from}}
+              </label>
+            </li>
+          </ng-container>
+
+        </ul>
+      </div>
+
     </div>
-    <div class="px-0 row py-2 display-grid">
-      <div *ngFor="let product of colorInfos" class="col-4 mb-3 card-product">
-        <a class="card text-decoration-none text-dark border-0 shadow w-100 h-100" [routerLink]="['/detail']">
-          <img src="https://www.alephksa.com/wp-content/uploads/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a_EN-1-scaled.jpg" class="card-img-top object-fit-cover" alt="..."  style="height:220px">
-          <div class="card-body">
-            <h5 class="card-title mb-1">550.000<span class="h7"> FCFA</span></h5>
-            <p class="card-title h7 text-muted mb-1">
-              <span class="text-decoration-line-through ">550.000 FCFA</span>
-              <span class="bg-primary-subtle text-primary h6 mx-1 p-1 rounded">-50%</span>
-            </p>
-            <p class="mb-1">
-              <i class="bi bi-star-fill text-warning me-1 h7"></i>
-              <i class="bi bi-star-fill text-warning me-1 h7"></i>
-              <i class="bi bi-star-fill text-warning me-1 h7"></i>
-              <i class="bi bi-star-fill text-warning me-1 h7"></i>
-              <i class="bi bi-star-fill text-secondary-emphasis me-1 h7"></i>
-              <span class="text-muted h7 ">(123 vote)</span>
-            </p>
-            <p class="card-text product-title">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Ajouter au panier</a>
+    <div class="col-md-10">
+      <!--  filter section  -->
+      <p class="text-muted h7 mb-0 d-block d-sm-none">14296 résultats trouvés</p>
+      <div class="border rounded bg-white py-2 px-2">
+        <div class="row mx-0 d-flex justify-content-end position-relative">
+          <div class="position-absolute bottom-50 d-sm-block d-none"><p class="text-muted mb-0">14296 résultats trouvés</p></div>
+          <div class="col-8 col-sm-5 col-xl-4 py-1">
+            <select class="form-select " aria-label="Default select example">
+              <option selected>Les plus demandés</option>
+              <option value="1">Nouvel arrivage</option>
+              <option value="2">Prix croissant</option>
+              <option value="3">Prix décroissant</option>
+              <option value="3">Les mieux noté</option>
+            </select>
           </div>
-        </a>
+          <div class="btn-group col-3 col-sm-2 col-lg-2 px-0 me-2 py-1" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn border py-0 bg-body-secondary display grid" (click)="display(grid)" value="1" #grid><i class="bi bi-grid-fill"></i></button>
+            <button type="button" class="btn border py-0 fw-bold display list" (click)="display(list)" value="2" #list><i class="bi bi-list"></i></button>
+          </div>
+        </div>
       </div>
+      <div class=" my-1">
+        <button class="btn btn-outline-primary text-muted fw-light py-1 mt-2 me-2">Samsung <i class="bi bi-x-lg"></i></button>
+        <button class="btn btn-outline-primary text-muted fw-light py-1 mt-2 me-2">Samsung <i class="bi bi-x-lg"></i></button>
+        <button class="btn btn-outline-primary text-muted fw-light py-1 mt-2 me-2">Samsung <i class="bi bi-x-lg"></i></button>
+        <button class="btn btn-outline-primary text-muted fw-light py-1 mt-2 me-2">Samsung <i class="bi bi-x-lg"></i></button>
+        <button class="btn border-0 text-primary fw-light py-1 ms-2">Suprimer les filtres</button>
+      </div>
+
+      <!--  products display-list -->
+      <div class="px-0 row py-2 display-list d-none">
+        <div *ngFor="let product of colorInfos" class="col-12 mb-3 card-product">
+          <a class="card text-decoration-none text-dark border-0 shadow w-100 h-100" [routerLink]="['/detail']">
+            <div class="row mx-0">
+              <div class="col-3">
+                <img src="https://www.alephksa.com/wp-content/uploads/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a_EN-1-scaled.jpg" class="card-img-top object-fit-cover" alt="..."  style="height:220px">
+              </div>
+              <div class="card-body col-9">
+                <h5 class="card-title mb-1">550.000<span class="h7"> FCFA</span></h5>
+                <p class="card-title h7 text-muted mb-1">
+                  <span class="text-decoration-line-through ">550.000 FCFA</span>
+                  <span class="bg-primary-subtle text-primary h6 mx-1 p-1 rounded">-50%</span>
+                </p>
+                <p class="mb-1">
+                  <i class="bi bi-star-fill text-warning me-1 h7"></i>
+                  <i class="bi bi-star-fill text-warning me-1 h7"></i>
+                  <i class="bi bi-star-fill text-warning me-1 h7"></i>
+                  <i class="bi bi-star-fill text-warning me-1 h7"></i>
+                  <i class="bi bi-star-fill text-secondary-emphasis me-1 h7"></i>
+                  <span class="text-muted h7 ">(123 vote)</span>
+                </p>
+                <p class="card-text product-title">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary float-end">Ajouter au panier</a>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--  products display-grid -->
+      <div class="px-0 row py-2 display-grid">
+        <div *ngFor="let product of colorInfos" class="col-4 col-sm-3 mb-3 card-product">
+          <a class="card position-relative text-decoration-none text-dark border-0 shadow w-100 h-100" [routerLink]="['/detail']">
+            <div class="position-absolute top-0 end-0 m-3">
+              <button class="btn bg-transparent text-secondary-emphasis border p-1 rounded-circle" style="width: 30px; height: 30px">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+            <img src="https://www.alephksa.com/wp-content/uploads/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a_EN-1-scaled.jpg" class="card-img-top object-fit-cover" alt="..."  style="height:220px">
+            <div class="card-body">
+              <h5 class="card-title mb-1">550.000<span class="h7"> FCFA</span></h5>
+              <p class="card-title h7 text-muted mb-1">
+                <span class="text-decoration-line-through ">550.000 FCFA</span>
+                <span class="bg-warning-subtle text-main h6 mx-1 p-1 rounded">-50%</span>
+              </p>
+              <p class="mb-1">
+                <i class="bi bi-star-fill text-warning me-1 h7"></i>
+                <i class="bi bi-star-fill text-warning me-1 h7"></i>
+                <i class="bi bi-star-fill text-warning me-1 h7"></i>
+                <i class="bi bi-star-fill text-warning me-1 h7"></i>
+                <i class="bi bi-star-fill text-secondary-emphasis me-1 h7"></i>
+                <span class="text-muted h7 ">(123 vote)</span>
+              </p>
+              <p class="card-text product-title">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn bg-main text-light">Ajouter au panier</a>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--  pagination  -->
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link">Precedent</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Suivant</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <!--  pagination  -->
-    <nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-end">
-        <li class="page-item disabled">
-          <a class="page-link">Precedent</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#">Suivant</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
 
-  <!-- other products -->
-  <div class="my-2 ps-0 pe-0">
-    <app-product-slider></app-product-slider>
-  </div>
+    <!-- other products -->
+    <div class="my-2 ps-0 pe-0">
+      <app-product-slider [sliderItemInput] = "sliderHistory" ></app-product-slider>
+    </div>
 
+  </div>
 </div>

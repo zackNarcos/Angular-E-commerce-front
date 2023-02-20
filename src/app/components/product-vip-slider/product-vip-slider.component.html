@@ -1,0 +1,38 @@
+<div class="px-1 py-2 rounded shadow bg-white h-100">
+  <section class="product p-0">
+    <div class="d-flex px-2">
+      <p class="text-nowrap h4 mb-2">{{ sliderItem.title }}</p>
+      <div class="text-end ms-auto">
+        <a [routerLink]="sliderItem.url" class="nav-link">Voir plus</a>
+      </div>
+    </div>
+    <div class="d-flex position-relative">
+      <div *ngIf="sliderItem.items" class="product-container d-flex">
+        <div *ngFor="let product of sliderItem.items"
+             class="col"
+        >
+          <div class="product-card card mx-2 my-2 border-0 d-flex position-relative">
+            <div *ngIf="product.isSolde" class="d-flex position-absolute top-0 end-0">
+              <p class="p-1 me-3 mt-2 bg-warning-subtle text-warning rounded shadow">-50%</p>
+            </div>
+            <img alt="..."
+                 class="card-img-top rounded"
+                 src="{{ product.img }}"
+                 style="object-fit: cover; height: 155px">
+            <div class="card-body pt-2 pb-0 px-2 text-center">
+<!--              <p class="card-text py-0 mb-1 text-truncate fw-light">{{ product.nom }}</p>-->
+              <div *ngIf="!product.isSolde">
+                <h6 class="card-title mb-0 h6">{{ product.oldPrice }} <span class="h7">Fcfa</span></h6>
+              </div>
+              <div *ngIf="product.isSolde">
+                <h6 class="card-title mb-1 h6">{{ product.newPrice }} <span class="h7">Fcfa</span></h6>
+                <h6 class="card-title mb-0 h7 text-muted text-decoration-line-through">{{ product.oldPrice }} <span
+                  class="h7">Fcfa</span></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
