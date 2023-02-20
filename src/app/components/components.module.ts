@@ -7,6 +7,8 @@ import {HeaderSidebarsComponent} from './header-sidebars/header-sidebars.compone
 import {RouterLink} from "@angular/router";
 import {ProductSliderComponent} from "./product-slider/product-slider.component";
 import { HeaderLighterComponent } from './header-lighter/header-lighter.component';
+import { CategoriesSliderComponent } from './categories-slider/categories-slider.component';
+import { ProductVipSliderComponent } from './product-vip-slider/product-vip-slider.component';
 
 
 @NgModule({
@@ -17,14 +19,18 @@ import { HeaderLighterComponent } from './header-lighter/header-lighter.componen
     HeaderSidebarsComponent,
     ProductSliderComponent,
     HeaderLighterComponent,
+    CategoriesSliderComponent,
+    ProductVipSliderComponent,
 
   ],
-    exports: [
-        HeaderComponent,
-        FooterComponent,
-        ProductSliderComponent,
-        HeaderLighterComponent
-    ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+    ProductSliderComponent,
+    HeaderLighterComponent,
+    CategoriesSliderComponent,
+    ProductVipSliderComponent
+  ],
   imports: [
     CommonModule,
     RouterLink

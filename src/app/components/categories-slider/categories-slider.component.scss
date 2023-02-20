@@ -1,0 +1,23 @@
+/* PRODUCTS */
+.product {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.nxt-btn, .pre-btn {
+  top: 36%;
+  z-index: 8;
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+}

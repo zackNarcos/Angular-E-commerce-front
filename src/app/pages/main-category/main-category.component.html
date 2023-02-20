@@ -1,0 +1,46 @@
+<div class="">
+  <div class="text-center pt-5 text-light header-category bg-dark">
+    <p class="fs-1 fw-bolder" href="#">Matières premières pour tissus et textiles</p>
+    <p class="fs-5" href="#">Découvrez les produits nouveaux et tendances</p>
+  </div>
+
+  <div class="position-relative">
+    <div class="px-5 mx-5 pt-1 category-container">
+      <app-categories-slider [sliderItemInput] = "sliderCategory"></app-categories-slider>
+      <div class="row mt-4">
+        <div class="col-6 pe-2">
+          <app-product-vip-slider [sliderItemInput] = "sliderProductsCertif"></app-product-vip-slider>
+        </div>
+        <div class="col-6 ps-2">
+          <app-product-vip-slider [sliderItemInput] = "sliderBestProducts"></app-product-vip-slider>
+        </div>
+      </div>
+      <h3 class="mt-4">Juste pour vous</h3>
+      <div class="row">
+        <div *ngFor="let product of sliderCategory.items" class="col-product mb-4">
+          <a class="card text-decoration-none product-card mx-2 my-2 border-0 d-flex position-relative shadow w-100 h-100" [routerLink]="['/detail']">
+            <div *ngIf="product.isSolde" class="d-flex position-absolute top-0 end-0">
+              <p class="p-1 me-3 mt-2 bg-warning-subtle text-warning rounded shadow">-50%</p>
+            </div>
+            <img alt="..."
+                 class="card-img-top rounded"
+                 src="{{ product.img }}"
+                 style="object-fit: cover; height: 225px">
+            <div class="card-body pt-2 pb-0 px-3 text-dark">
+              <p class="card-text py-0 mb-2 text-truncate fw-normal">{{ product.nom }}</p>
+              <div *ngIf="!product.isSolde">
+                <h6 class="card-title mb-0 h6">{{ product.oldPrice }} <span class="h7">Fcfa</span></h6>
+              </div>
+              <div *ngIf="product.isSolde">
+                <h6 class="card-title mb-1 h5">{{ product.newPrice }} <span class="h7">Fcfa</span></h6>
+                <h6 class="card-title mb-0 h7 text-muted text-decoration-line-through">{{ product.oldPrice }} <span
+                  class="h7">Fcfa</span></h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

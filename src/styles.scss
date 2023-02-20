@@ -3,6 +3,20 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
+.header-category{
+  background-image: url("https://www.cips.org/supply-management-jobs/getasset/63f90cc8-0778-4023-80b9-85246ce586b0/");
+  background-size: cover;
+  height: 260px;
+}
+.header-home{
+  background-image: url("../src/assets/home/home-header.jpg");
+  background-size: cover;
+  height: 260px;
+}
+.container-home{
+  background-image: linear-gradient(#000000, #e7e7e7, #e7e7e7, #e7e7e7, #e7e7e7, #e7e7e7);
+}
+
 .product-title {
   overflow: hidden;
   display: -webkit-box; /* Utilise un conteneur à boîte pour gérer le débordement */
@@ -51,7 +65,7 @@ body {
 }
 
 .text-main {
-  color: #ff7913;
+  color: #ff7913 !important;
 }
 
 .bg-main {
@@ -64,4 +78,30 @@ body {
 
 .border-main-2 {
   border: solid 2px #ff7913 !important;
+}
+.col-product{
+  flex: 0 0 auto;
+  width: 33% !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+  /* top: 100%; */
+  left: -100% !important;
+  margin-top: var(--bs-dropdown-spacer);
+}
+
+
+
+
+
+@media only screen and (max-width: 1990px) {
+  .col-product{
+    width: 20% !important;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .col-product{
+    width: 20% !important;
+  }
 }

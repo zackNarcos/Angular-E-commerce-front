@@ -1,33 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {SliderItems} from "../../shareds/models/slider-items";
-
-declare interface CategoryInfo {
-  path: string;
-  title: string;
-  icon: string;
-}
-
-declare interface FromInfo {
-  from: string;
-  value: boolean;
-}
-
-declare interface BrandInfo {
-  title: string;
-  value: boolean;
-}
-
-declare interface ColorInfo {
-  title: string;
-  value: boolean;
-  color: string;
-}
-
-declare interface SizeInfo {
-  from: string;
-  value: boolean;
-  size: string;
-}
+import {SizeInfo} from "../../shareds/models/sizeInfo";
+import {ColorInfo} from "../../shareds/models/colorInfo";
+import {BrandInfo} from "../../shareds/models/brandInfo";
+import {FromInfo} from "../../shareds/models/fromInfo";
+import {CategoryInfo} from "../../shareds/models/categoryInfo";
 
 @Component({
   selector: 'app-category',

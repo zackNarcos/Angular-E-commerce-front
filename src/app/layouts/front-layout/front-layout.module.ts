@@ -7,6 +7,7 @@ import {CategoryComponent} from '../../pages/category/category.component';
 import {FormsModule} from "@angular/forms";
 import {ProductShowComponent} from '../../pages/product-show/product-show.component';
 import {ComponentsModule} from "../../components/components.module";
+import { MainCategoryComponent } from '../../pages/main-category/main-category.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {ComponentsModule} from "../../components/components.module";
 
     HomeComponent,
     CategoryComponent,
-    ProductShowComponent
+    ProductShowComponent,
+    MainCategoryComponent
   ],
   imports: [
     CommonModule,

@@ -12,8 +12,6 @@ export class FrontLayoutComponent implements OnInit, AfterViewInit {
   constructor(private route: ActivatedRoute, private router: Router) {
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
-        console.log(val)
-        console.log(val.url)
         // if (val.url.includes('/')) {
         if (val.url == '/') {
           this.showMenu1 = true;
